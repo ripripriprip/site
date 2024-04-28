@@ -1,5 +1,148 @@
-hello hfm jury,<br>
-<br>
-hier wird in den nächsten tagen unser protoype spielbar sein.<br>
-<br>
-thx 4 patience
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Terminal Crossing Prototype</title>
+	<!-- Include Font Awesome CSS -->
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible&display=swap">
+	<style>
+		body {
+			margin: 0;
+			padding: 0;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			height: 100vh;
+			background-color: #2c1d29;
+			color: #bfc7e3;
+			font-size: 13pt;
+			font-family: 'Atkinson Hyperlegible', sans-serif;
+		}
+
+		.container {
+			display: flex;
+			width: 100%;
+
+			flex-direction: column;
+		}
+
+		.image {
+			flex: none;
+			height: 200px;
+			background-position: center;
+		
+			background-color: #bfc7e3;
+			background-image: url('./screenshot.png');
+			background-size: cover;
+		}
+
+		@media screen and (min-width: 768px) {
+			.image {
+				flex: 1;
+				background-position: center;
+				height: 100%;
+				max-width: 50em;
+			}
+
+			.container {
+				display: flex;
+				flex-direction: row;
+				align-items: left;
+				justify-content: left;
+				height: 100%;
+				width: 100%;
+			}
+		}
+
+		.content {
+			flex: 1;
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			justify-content: center;
+			padding: 20px;
+		}
+
+		.logo {
+			margin-bottom: 20px;
+		}
+
+		.instruction {
+			text-align: left;
+			margin: 3em;
+		}
+
+		.logo {
+			text-align: center;
+		}
+
+		.download-buttons {
+			text-align: center;
+			align-items: center;
+			justify-content: center;
+		}
+
+		.riprip-image {
+			max-width: 100px;
+			margin-top: 5em
+		}
+		@media screen and (min-width: 768px) {
+				.riprip-image {
+					position: absolute;
+					bottom: 1em;
+					right: 1em;
+				}
+			}
+
+		.download-buttons a {
+			display: inline-block;
+			padding: 0.5em 1em;
+			background-color: #000; 
+			color: #fff;
+			text-decoration: none;
+			border-radius: 5px;
+			transform: scale(1.01);
+			transition: transform 0.3s ease, background-image 0.3s ease;
+			
+			margin-bottom: 0.5em
+		}
+		.download-buttons a:hover, .download-buttons a:focus {
+			transform: scale(1.05);
+			background-image: linear-gradient(30deg, #6361b2, #8352af);
+			z-index: 10;
+		}
+
+		.play-button {
+			background-image: linear-gradient(30deg, #750181, #8f0043);
+		}
+
+
+		i {
+			padding-right: 0.5em;
+		}
+	</style>
+</head>
+<body>
+	<div class="container">
+		<div class="image"></div>
+		<div class="content">
+			<p class="logo"><img class="logo" src="./logo.png" alt="Terminal Crossing"></br>
+			Hessen Film & Medien Prototype</p>
+			<p class="instruction">
+				Steuerung: <br>
+				<br>
+				Mouse Drag & Click <br>
+				<small>oder</small></br>
+				WASD
+				
+			</p>
+			<div class="download-buttons">
+				<a class="play-button" href="{insertlinkhere]" download><i class="fa-solid fa-play"></i> Watch Playthrough</a>
+				<a class="download-button" href="terminal-crossing-prototype-mac.zip" download><i class="fa-brands fa-windows"></i> Download</a>
+				<a class="download-button" href="terminal-crossing-prototype.exe" download><i class="fa-brands fa-apple"></i> Download</a>
+
+			</div>
+			<img class="riprip-image" src="./riprip_frei_yellow.png" alt="Riprip Frei Yellow">
+		</div>	</div>
+</body>
+</html>
